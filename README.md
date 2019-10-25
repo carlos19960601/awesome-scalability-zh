@@ -1,40 +1,42 @@
 # awesome-scalability-zh
 [![logo.png](logo.png)](https://binhnguyennus.github.io/awesome-scalability/)
 
-An updated and organized reading list for illustrating the patterns of scalable, reliable, and performant large-scale systems. Concepts are explained in the articles of prominent engineers and credible references. Case studies are taken from battle-tested systems that serve millions to billions of users.
+一份说明可伸缩、高可靠和高性能的大规模系统模式的阅读清单。案例学习都是从服务于数百万甚至数亿用用户的线上系统总结的。
 
 #### 如果你的系统变慢了 :traffic_light:
-> Understand your problems: scalability problem (fast for a single user but slow under heavy load) or performance problem (slow for a single user) by reviewing some [design principles](#principle) and checking how [scalability](#scalability) and [performance](#performance) problems are solved at tech companies. The section of [intelligence](#intelligence) are created for those who work with data and machine learning at big (data) and deep (learning) scale.
+> 定位你的问题: 可扩展问题(对于单个用户请求响应很快但是在负载高时变慢)或者性能问题(对于单个用户请求慢)可以参考[设计原则](#设计原则)和[可伸缩性](#可伸缩性)和[性能](#性能)问题在技术公司是如何解决的。
+>
+> [智能](#智能)部分是为处理数据，机器学习和深度学习的人准备
 
 #### 如果你的系统挂了 :construction:
-> "Even if you lose all one day, you can build all over again if you retain your calm!" - Thuan Pham, CTO of Uber. So, keep calm and mind the [availability](#availability) and [stability](#stability) matters! 
+> "即使某天你失去了一切，如果保持镇静，你还能东山再起" - Thuan Pham，Uber CTO。所以遇事不慌，记住[可用性](#可用性)和[稳定性](#稳定性)d的重要性。
 
 #### 如果你面临系统设计的面试 :ocean:
-> Look at some [interview notes](#interview) and [real-world architectures with completed diagrams](#architecture) to get a comprehensive view before designing your system on whiteboard. You can check some [talks](#talk) of engineers from tech giants to know how they build, scale, and optimize their systems. There are some selected [books](#book) for you (most of them are free)! Good luck :four_leaf_clover:
+> 在白板设计应用之前，看看[面试笔记](#面试笔记)和[完整图示的实际架构](#架构)有个全面的认识。你还可以看看技术大牛的[演讲](#演讲)，了解他们怎么构建，扩展和优化他们的系统。推荐一些[书籍](#书籍)(大部分都是免费的)给你！祝你好运:four_leaf_clover:
 
 #### 如果你正在构建自己的梦之队 :ferris_wheel:
-> The goal of scaling team is not growing team size but increasing team output and value. You can find out how tech companies reach that goal in various aspects: hiring, management, organization, culture, and communication in the [organization](#organization) section.
+> 扩大团队规模的目标不是增加团队规模，而是增加团队产出和价值。你可以在[组织](organization)中看到技术公司如何在各个方面实现这个目标：雇用，管理，组织，文化和沟通。
 
 #### 社区的力量 :mountain_cableway::aerial_tramway::mountain_cableway:
 
-> Contributions are greatly welcome! You may want to take a look at the [contribution guidelines](CONTRIBUTING.md). If you see a link here that is no longer maintained or is not a good fit, please submit a pull request!
+> 欢迎贡献！你可以看看 [contribution guidelines](CONTRIBUTING.md)。如果你发现一些链接失效或错误，请提交PR。
 
-> Many long hours of hard work have gone into this project. If you find it helpful, please share on Facebook, [on Twitter](https://ctt.ec/V8B2p), [on Weibo](http://t.cn/RnjFLCB), or on your chat groups! Knowledge is power, knowledge shared is power multiplied. Thank you!
+> 这个项目花了很多时间整理。如果你觉得对你有帮助，请分享到Facebook，Twitter和微博，或者分享到聊天群众！知识就是力量，分享知识力量翻倍。谢谢。
 
 ## Content
-- [基本原则](#基本原则)
-- [可扩展性](#可扩展性)
+- [设计原则](#设计原则)
+- [可伸缩性](#可伸缩性)
 - [可用性](#可用性)
 - [稳定性](#稳定性)
 - [性能](#性能)
-- [Intelligence](#intelligence)
+- [智能](#智能)
 - [架构](#架构)
 - [面试](#面试)
-- [Organization](#organization)
+- [组织](#组织)
 - [演讲](#演讲)
 - [推荐书籍](#推荐书籍)
 
-## 基本原则
+## 设计原则
 * [Lessons from Giant-Scale Services - Eric Brewer, UC Berkeley & Google](https://people.eecs.berkeley.edu/~brewer/papers/GiantScale-IEEE.pdf)
 * [Designs, Lessons and Advice from Building Large Distributed Systems - Jeff Dean, Google](https://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf)
 * [How to Design a Good API & Why it Matters - Joshua Bloch, CMU & Google](https://www.infoq.com/presentations/effective-api-design)
@@ -100,7 +102,7 @@ An updated and organized reading list for illustrating the patterns of scalable,
 * [Design for Evolution](https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/design-for-evolution)
 * [Learn from Mistakes](http://highscalability.com/blog/2013/8/26/reddit-lessons-learned-from-mistakes-made-scaling-to-1-billi.html)
 
-## 可扩展性
+## 可伸缩性
 * [Microservices and Orchestration](https://martinfowler.com/microservices/)
 	* [Container (8 parts) at Riot Games](https://engineering.riotgames.com/news/thinking-inside-container)
 	* [Containerization at Pinterest](https://medium.com/@Pinterest_Engineering/containerization-at-pinterest-92295347f2f3)
@@ -122,17 +124,17 @@ An updated and organized reading list for illustrating the patterns of scalable,
 	* [Kubernetes Platform at Pinterest](https://medium.com/pinterest-engineering/building-a-kubernetes-platform-at-pinterest-fb3d9571c948)
 	* [Microservices at Nubank](https://medium.com/building-nubank/microservices-at-nubank-an-overview-2ebcb336c64d)
 * [分布式缓存](https://www.wix.engineering/single-post/scaling-to-100m-to-cache-or-not-to-cache)
-	* [EVCache: Distributed In-memory Caching at Netflix](https://medium.com/netflix-techblog/caching-for-a-global-netflix-7bcc457012f1)
+	* [EVCache: Netflix的分布式内存缓存](https://medium.com/netflix-techblog/caching-for-a-global-netflix-7bcc457012f1)
 	* [EVCache Cache Warmer Infrastructure at Netflix](https://medium.com/netflix-techblog/cache-warming-agility-for-a-stateful-service-2d3b1da82642)
 	* [Memsniff: Robust Memcache Traffic Analyzer at Box](https://blog.box.com/blog/introducing-memsniff-robust-memcache-traffic-analyzer/)
 	* [Caching with Consistent Hashing and Cache Smearing at Etsy](https://codeascraft.com/2017/11/30/how-etsy-caches/)
 	* [Analysis of Photo Caching at Facebook](https://code.facebook.com/posts/220956754772273/an-analysis-of-facebook-photo-caching/)
-	* [Cache Efficiency Exercise at Facebook](https://code.facebook.com/posts/964122680272229/web-performance-cache-efficiency-exercise/)
+	* [Facebook的内存高效实践](https://code.facebook.com/posts/964122680272229/web-performance-cache-efficiency-exercise/)
 	* [tCache: Scalable Data-aware Java Caching at Trivago](http://tech.trivago.com/2015/10/15/tcache/)
 	* [Reduce Memcached Memory Usage by 50% at Trivago](http://tech.trivago.com/2017/12/19/how-trivago-reduced-memcached-memory-usage-by-50/)
 	* [Caching Internal Service Calls at Yelp](https://engineeringblog.yelp.com/2018/03/caching-internal-service-calls-at-yelp.html)
 	* [Estimating the Cache Efficiency using Big Data at Allegro](https://allegro.tech/2017/01/estimating-the-cache-efficiency-using-big-data.html)
-	* [Distributed Cache at Zalando](https://jobs.zalando.com/tech/blog/distributed-cache-akka-kubernetes/)
+	* [Zalando的分布式缓存](https://jobs.zalando.com/tech/blog/distributed-cache-akka-kubernetes/)
 	* [Application Data Caching from RAM to SSD at NetFlix](https://medium.com/netflix-techblog/evolution-of-application-data-caching-from-ram-to-ssd-a33d6fa7a690)
 	* [Tradeoffs of Replicated Cache at Skyscanner](https://medium.com/@SkyscannerEng/the-tradeoffs-of-a-replicated-cache-b6680c722f58)
 	* [Avoiding Cache Stampede at DoorDash](https://blog.doordash.com/avoiding-cache-stampede-at-doordash-55bbf596d94b)
@@ -591,23 +593,23 @@ An updated and organized reading list for illustrating the patterns of scalable,
 	* [Improving Homepage Performance at Zillow](https://www.zillow.com/engineering/improving-homepage-performance/)
 	* [The Process of Optimizing for Client Performance at Expedia](https://medium.com/expedia-engineering/go-fast-or-go-home-the-process-of-optimizing-for-client-performance-57bb497402e)
     
-## Intelligence
+## 智能
 * [大数据](https://insights.sei.cmu.edu/sei_blog/2017/05/reference-architectures-for-big-data-systems.html)	
-	* [Data Platform at Uber](https://eng.uber.com/uber-big-data-platform/)
-	* [Data Platform at BMW](https://www.unibw.de/code/events-u/jt-2018-workshops/ws3_bigdata_vortrag_widmann.pdf)
-	* [Data Platform at Netflix](https://www.youtube.com/watch?v=CSDIThSwA7s)
-	* [Data Platform at Flipkart](https://tech.flipkart.com/overview-of-flipkart-data-platform-20c6d3e9a196)
-	* [Data Platform at Khan Academy](http://engineering.khanacademy.org/posts/khanalytics.htm)
-	* [Data Infrastructure at Airbnb](https://medium.com/airbnb-engineering/data-infrastructure-at-airbnb-8adfb34f169c)
-	* [Data Infrastructure at LinkedIn](https://www.infoq.com/presentations/big-data-infrastructure-linkedin)
-	* [Data Infrastructure at GO-JEK](https://blog.gojekengineering.com/data-infrastructure-at-go-jek-cd4dc8cbd929)
-	* [Data Ingestion Infrastructure at Pinterest](https://medium.com/@Pinterest_Engineering/scalable-and-reliable-data-ingestion-at-pinterest-b921c2ee8754)
-	* [Data Analytics Architecture at Pinterest](https://medium.com/@Pinterest_Engineering/behind-the-pins-building-analytics-f7b508cdacab)
-	* [Big Data Processing (2 parts) at Spotify](https://labs.spotify.com/2017/10/23/big-data-processing-at-spotify-the-road-to-scio-part-2/)
-	* [Big Data Processing at Uber](https://cdn.oreillystatic.com/en/assets/1/event/160/Big%20data%20processing%20with%20Hadoop%20and%20Spark%2C%20the%20Uber%20way%20Presentation.pdf)
-	* [Analytics Pipeline at Lyft](https://cdn.oreillystatic.com/en/assets/1/event/269/Lyft_s%20analytics%20pipeline_%20From%20Redshift%20to%20Apache%20Hive%20and%20Presto%20Presentation.pdf)
-	* [Analytics Pipeline at Grammarly](https://tech.grammarly.com/blog/building-a-versatile-analytics-pipeline-on-top-of-apache-spark)
-	* [Analytics Pipeline at Teads](https://medium.com/teads-engineering/give-meaning-to-100-billion-analytics-events-a-day-d6ba09aa8f44)
+	* [Uber数据平台](https://eng.uber.com/uber-big-data-platform/)
+	* [BMW数据平台](https://www.unibw.de/code/events-u/jt-2018-workshops/ws3_bigdata_vortrag_widmann.pdf)
+	* [Netflix数据平台](https://www.youtube.com/watch?v=CSDIThSwA7s)
+	* [Flipkart数据平台](https://tech.flipkart.com/overview-of-flipkart-data-platform-20c6d3e9a196)
+	* [Khan Academy数据平台](http://engineering.khanacademy.org/posts/khanalytics.htm)
+	* [Airbnb数据平台](https://medium.com/airbnb-engineering/data-infrastructure-at-airbnb-8adfb34f169c)
+	* [LinkedIn的数据基础架构](https://www.infoq.com/presentations/big-data-infrastructure-linkedin)
+	* [GO-JEK的数据基础架构](https://blog.gojekengineering.com/data-infrastructure-at-go-jek-cd4dc8cbd929)
+	* [Pinterest的数据基础架构](https://medium.com/@Pinterest_Engineering/scalable-and-reliable-data-ingestion-at-pinterest-b921c2ee8754)
+	* [Pinterest的数据分析架构](https://medium.com/@Pinterest_Engineering/behind-the-pins-building-analytics-f7b508cdacab)
+	* [Spotify大数据处理](https://labs.spotify.com/2017/10/23/big-data-processing-at-spotify-the-road-to-scio-part-2/)
+	* [Uber大数据处理](https://cdn.oreillystatic.com/en/assets/1/event/160/Big%20data%20processing%20with%20Hadoop%20and%20Spark%2C%20the%20Uber%20way%20Presentation.pdf)
+	* [数据分析流水线](https://cdn.oreillystatic.com/en/assets/1/event/269/Lyft_s%20analytics%20pipeline_%20From%20Redshift%20to%20Apache%20Hive%20and%20Presto%20Presentation.pdf)
+	* [数据分析流水线](https://tech.grammarly.com/blog/building-a-versatile-analytics-pipeline-on-top-of-apache-spark)
+	* [Analytics Pipeline at Teads数据分析流水线](https://medium.com/teads-engineering/give-meaning-to-100-billion-analytics-events-a-day-d6ba09aa8f44)
 	* [ML Data Pipelines for Real-Time Fraud Prevention at PayPal](https://www.infoq.com/presentations/paypal-ml-fraud-prevention-2018)
 	* [Big Data Analytics and ML Techniques at LinkedIn](https://cdn.oreillystatic.com/en/assets/1/event/269/Big%20data%20analytics%20and%20machine%20learning%20techniques%20to%20drive%20and%20grow%20business%20Presentation%201.pdf)
 	* [Self-Serve Reporting Platform on Hadoop at LinkedIn](https://cdn.oreillystatic.com/en/assets/1/event/137/Building%20a%20self-serve%20real-time%20reporting%20platform%20at%20LinkedIn%20Presentation%201.pdf)
@@ -756,7 +758,7 @@ An updated and organized reading list for illustrating the patterns of scalable,
 	* [Transit and Peering: How Your Requests Reach GitHub](https://githubengineering.com/transit-and-peering-how-your-requests-reach-github/)
 	* [How Spotify Streams Music](https://labs.spotify.com/2018/08/31/smoother-streaming-with-bbr/)
 
-## Organization
+## 组织
 * [Engineering Levels at SoundCloud](https://developers.soundcloud.com/blog/engineering-levels)
 * [Engineering Roles at Palantir](https://medium.com/palantir/dev-versus-delta-demystifying-engineering-roles-at-palantir-ad44c2a6e87)
 * [Scaling Engineering Teams at Twitter](https://www.youtube.com/watch?v=-PXi_7Ld5kU)
