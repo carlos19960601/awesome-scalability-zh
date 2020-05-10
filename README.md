@@ -751,7 +751,7 @@
 	* [The Precise Meaning of I/O Wait Time in Linux](http://veithen.github.io/2013/11/18/iowait-linux.html)
 	* [Paxos Made Live – An Engineering Perspective](https://research.google.com/archive/paxos_made_live.html)
 	* [如何实现分布式锁](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html)
-	* [SQL事务隔离级别](http://elliot.land/post/sql-transaction-isolation-levels-explained)
+	* [SQL事务隔离级别](http://elliot.land/post/sql-transaction-isolation-levels-explained)([原文](./原文/SQL Transaction Isolation Levels Explained.md))([译文](./译文/[SQL事务隔离级别.md))
 * ["What Happens When... and How" 问题](https://www.glassdoor.com/Interview/What-happens-when-you-type-www-google-com-in-your-browser-QTN_56396.htm)
 	* [Netflix: What Happens When You Press Play?](http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html)
 	* [Monzo: How Peer-To-Peer Payments Work](https://monzo.com/blog/2018/04/05/how-monzo-to-monzo-payments-work/)
