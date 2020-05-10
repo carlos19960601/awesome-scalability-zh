@@ -6,7 +6,7 @@ This article is part of a series. You do not have to read them in order but I wi
 
 3. [Implementing Repeatable Read and Serializable Transaction Isolation](http://elliot.land/post/implementing-repeatable-read-and-serializable-transaction-isolation)
 
-![img](SQL Transaction Isolation Levels Explained/0*ey7SyiIp5vdZYVh5.png)
+![img](SQL_Transaction_Isolation_Levels_Explained/0*ey7SyiIp5vdZYVh5.png)
 
 ### **The Bad Stuff**
 
@@ -24,7 +24,7 @@ id | name | age
 
 A *dirty read* is when the current transaction reads a row written by another uncommitted transaction that’s currently in-flight. For example:
 
-![img](SQL Transaction Isolation Levels Explained/1*aRNlmIXl861sSKeuGRtfrQ.png)
+![img](SQL_Transaction_Isolation_Levels_Explained/1*aRNlmIXl861sSKeuGRtfrQ.png)
 
 Basically, if the database is not able to keep track of who is changing the data (by keeping multiple versions of the same row with different visibilities) then rows be read even through they should not yet be visible to that other transaction.
 
@@ -32,7 +32,7 @@ Basically, if the database is not able to keep track of who is changing the data
 
 A *non-repeatable read* occurs when the current transaction reads the same data but this time it is different. It is different because another transaction has been committed during the life of the current transaction:
 
-![img](SQL Transaction Isolation Levels Explained/1*ObvNkYvUlMZKyMEQiIDMUQ.png)
+![img](SQL_Transaction_Isolation_Levels_Explained/1*ObvNkYvUlMZKyMEQiIDMUQ.png)
 
 Basically, the database does not maintain what the transaction has already seen so each time the data is read (such as multiple `SELECT` statements in the same transaction) the same visibility check is done on those rows but some rows may have changed in the mean time.
 
@@ -40,7 +40,7 @@ Basically, the database does not maintain what the transaction has already seen 
 
 A *phantom read* happens when the current transaction re-executes a query returning a set of rows that satisfy a search condition and finds that the set of rows satisfying the condition has changed due to another recently-committed transaction.
 
-![img](SQL Transaction Isolation Levels Explained/1*EbrkLblIBA0ysuIxWLTwvQ.png)
+![img](SQL_Transaction_Isolation_Levels_Explained/1*EbrkLblIBA0ysuIxWLTwvQ.png)
 
 This can be thought of as a special type of non-repeatable read, but it is important to distinguish it as a different case because the possibility of it occurring depends on the isolation levels explained next.
 
