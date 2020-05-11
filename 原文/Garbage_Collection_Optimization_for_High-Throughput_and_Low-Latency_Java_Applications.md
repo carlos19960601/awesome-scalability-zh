@@ -1,10 +1,8 @@
-[原文地址](https://engineering.linkedin.com/garbage-collection/garbage-collection-optimization-high-throughput-and-low-latency-java-applications)
-
 High-performance applications form the backbone of the modern web. At LinkedIn, a number of internal high-throughput services cater to thousands of user requests per second. For optimal user experience, it is very important to serve these requests with low latency.
 
 For example, a product our members use regularly is the Feed - a constantly updating list of professional activities and content. Examples of various feeds across LinkedIn include those in company pages, school pages, and most importantly - the homepage feed. The underlying feed data platform that indexes these updates from various entities in our economic graph (members, companies, groups, etc.) has to serve relevant updates with high throughput and low latency.
 
-![ LinkedIn Feeds](Garbage Collection Optimization for High-Throughput and Low-Latency Java Applications/blog-feed.png)
+![ LinkedIn Feeds](Garbage_Collection_Optimization_for_High-Throughput_and_Low-Latency_Java_Applications/blog-feed.png)
 
 For taking these types of high-throughput, low-latency Java applications to production, developers have to ensure consistent performance at every stage of the application development cycle. Determining optimal Garbage Collection (GC) settings is critical to achieve these metrics.
 
@@ -81,7 +79,7 @@ There are also a couple of other interesting options that deal with mapping task
 
 Concurrent GC typically increases CPU usage. While we observed that the default settings of CMS behaved well, the increased CPU usage due to concurrent GC work with the G1 collector degraded our application's throughput and latency significantly. G1 also tends to impose a larger memory overhead on the application as compared to CMS. For low-throughput applications that are not CPU-bound, high CPU usage by GC may not be a pressing concern.
 
-![CPU usage in % with ParNew/CMS and G1: the node with relatively variable CPU usage used G1 with the option `-XX:G1RSetUpdatingPauseTimePercent=20`](Garbage Collection Optimization for High-Throughput and Low-Latency Java Applications/blog-G1-CPU.png)
+![CPU usage in % with ParNew/CMS and G1: the node with relatively variable CPU usage used G1 with the option `-XX:G1RSetUpdatingPauseTimePercent=20`](Garbage_Collection_Optimization_for_High-Throughput_and_Low-Latency_Java_Applications/blog-G1-CPU.png)
 
 ![Requests served per second with ParNew/CMS and G1: the node with lower throughput used G1 with the option `-XX:G1RSetUpdatingPauseTimePercent=20`](Garbage Collection Optimization for High-Throughput and Low-Latency Java Applications/blog-g1-throughput_0.png)
 
@@ -102,7 +100,16 @@ For the prototype feed data platform system, we tried to optimize garbage collec
 
 With ParNew/CMS, we saw 40-60 ms young generation pauses once every three seconds and a CMS cycle once every hour. We used the following JVM options:
 
-这里原文也看不到了
+```
+// JVM sizing options
+-server -Xms40g -Xmx40g -XX:MaxDirectMemorySize=4096m -XX:PermSize=256m -XX:MaxPermSize=256m   
+// Young generation options
+-XX:NewSize=6g -XX:MaxNewSize=6g -XX:+UseParNewGC -XX:MaxTenuringThreshold=2 -XX:SurvivorRatio=8 -XX:+UnlockDiagnosticVMOptions -XX:ParGCCardsPerStrideChunk=32768
+// Old generation  options
+-XX:+UseConcMarkSweepGC -XX:CMSParallelRemarkEnabled -XX:+ParallelRefProcEnabled -XX:+CMSClassUnloadingEnabled  -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseCMSInitiatingOccupancyOnly   
+// Other options
+-XX:+AlwaysPreTouch -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:-OmitStackTraceInFastThrow
+```
 
 With these options, our application's 99.9th percentile latency reduced to 60 ms while providing a throughput of thousands of read requests.
 
