@@ -4,17 +4,20 @@
 一份说明可伸缩、高可靠和高性能的大规模系统模式的阅读清单。案例学习都是从服务于数百万甚至数亿用用户的线上系统总结的。
 
 #### 如果你的系统变慢了 :traffic_light:
+
 > 定位你的问题: 可扩展问题(对于单个用户请求响应很快但是在负载高时变慢)或者性能问题(对于单个用户请求慢)可以参考[设计原则](#设计原则)和[可伸缩性](#可伸缩性)和[性能](#性能)问题在技术公司是如何解决的。
 >
 > [智能](#智能)部分是为处理数据，机器学习和深度学习的人准备
 
 #### 如果你的系统挂了 :construction:
-> "即使某天你失去了一切，如果保持镇静，你还能东山再起" - Thuan Pham，Uber CTO。所以遇事不慌，记住[可用性](#可用性)和[稳定性](#稳定性)d的重要性。
+
+> "即使某天你失去了一切，如果保持镇静，你还能东山再起" - Thuan Pham，Uber CTO。所以遇事不慌，记住[可用性](#可用性)和[稳定性](#稳定性)的重要性。
 
 #### 如果你面临系统设计的面试 :ocean:
 > 在白板设计应用之前，看看[面试笔记](#面试笔记)和[完整图示的实际架构](#架构)有个全面的认识。你还可以看看技术大牛的[演讲](#演讲)，了解他们怎么构建，扩展和优化他们的系统。推荐一些[书籍](#书籍)(大部分都是免费的)给你！祝你好运:four_leaf_clover:
 
 #### 如果你正在构建自己的梦之队 :ferris_wheel:
+
 > 扩大团队规模的目标不是增加团队规模，而是增加团队产出和价值。你可以在[组织](organization)中看到技术公司如何在各个方面实现这个目标：雇用，管理，组织，文化和沟通。
 
 #### 社区的力量 :mountain_cableway::aerial_tramway::mountain_cableway:
@@ -734,10 +737,10 @@
 
 ## 面试
 * [设计大规模系统](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
-	* [My Scaling Hero - Jeff Atwood (a dose of Endorphins before your interview, JK)](https://blog.codinghorror.com/my-scaling-hero/)
-	* [Software Engineering Advice from Building Large-Scale Distributed Systems - Jeff Dean](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/stanford-295-talk.pdf)
+	* [我的伸缩偶像 - Jeff Atwood (a dose of Endorphins before your interview, JK)](https://blog.codinghorror.com/my-scaling-hero/)
+	* [构建大型分布式系统的软件工程建议 - Jeff Dean](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/stanford-295-talk.pdf)
 	* [Introduction to Architecting Systems for Scale](https://lethain.com/introduction-to-architecting-systems-for-scale/)
-	* [系统设计面试的剖析](https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f)
+	* [系统设计面试的剖析](https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f)[原文](./原文/Anatomy%20of%20a%20System%20Design%20Interview.md)
 	* [在系统设计面试之前你需要知道的8件事](http://blog.gainlo.co/index.php/2015/10/22/8-things-you-need-to-know-before-system-design-interviews/)
 	* [10个系统设计的面试问题](https://hackernoon.com/top-10-system-design-interview-questions-for-software-engineers-8561290f0444)
 	* [十大常见的大规模软件架构模式概述](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
