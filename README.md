@@ -146,7 +146,7 @@
 	* [可扩展Redis在Twitter的应用](http://highscalability.com/blog/2014/9/8/how-twitter-uses-redis-to-scale-105tb-ram-39mm-qps-10000-ins.html)
 	* [Slack 使用Redis扩展任务队列](https://slack.engineering/scaling-slacks-job-queue-687222e9d100)
 	* [Github 将持久性数据从Redis中移出](https://githubengineering.com/moving-persistent-data-out-of-redis/)
-	* [Instagram 在 Redis 中存储数以亿计的简单键值对](https://engineering.instagram.com/storing-hundreds-of-millions-of-simple-key-value-pairs-in-redis-1091ae80f74c) [原文](./原文/Storing_hundreds_of_millions_of_simple_key-value_pairs_in_Redis.md)
+	* [Instagram 在 Redis 中存储数以亿计的简单键值对](https://engineering.instagram.com/storing-hundreds-of-millions-of-simple-key-value-pairs-in-redis-1091ae80f74c) | [原文](./原文/Storing_hundreds_of_millions_of_simple_key-value_pairs_in_Redis/Storing_hundreds_of_millions_of_simple_key-value_pairs_in_Redis.md) |  [译文](./译文/在redis中存储成千上万个简单的kv.md)
 	* [Redis在Trivago的应用](http://tech.trivago.com/2017/01/25/learn-redis-the-hard-way-in-production/)
 	* [Deliveroo 优化Redis存储](https://deliveroo.engineering/2017/01/19/optimising-membership-queries.html)
 	* [Wattpad Redis中的内存优化](http://engineering.wattpad.com/post/23244724794/store-more-stuff-memory-optimization-in-redis)
