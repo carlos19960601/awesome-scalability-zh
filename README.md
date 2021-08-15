@@ -1,5 +1,5 @@
 # awesome-scalability中文版
-[![logo.png](logo.png)](https://binhnguyennus.github.io/awesome-scalability/)
+[![logo.png](/logo.png)](http://awesome-scalability.com/)
 
 一份说明可伸缩、高可靠和高性能的大规模系统模式的阅读清单。案例学习都是从服务于数百万甚至数亿用用户的线上系统总结的。
 
@@ -47,7 +47,7 @@
 * [为企业构建平台时要牢记的事情 - Heidi Williams, VP Platform at Box](https://blog.box.com/blog/4-things-to-keep-in-mind-when-building-a-platform-for-the-enterprise/)
 * [混沌工程原理](https://www.usenix.org/conference/srecon17americas/program/presentation/rosenthal)
 * [在混乱中寻找秩序](https://www.usenix.org/conference/srecon16/program/presentation/lueder)
-* [12-factor应用](https://12factor.net/) | [原文 ](./原文/The_Twelve-Factor_APP.md) | [译文](./译文/12-factor应用.md)
+* [12-factor应用](https://12factor.net/) | [原文](./原文/The_Twelve-Factor_APP.md) | [译文](./译文/12-factor应用.md)
 * [整洁架构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
 * [高内聚和低耦合](http://www.math-cs.gordon.edu/courses/cs211/lectures-2009/Cohesion,Coupling,MVC.pdf)
 * [单体和微服务](https://medium.com/@SkyscannerEng/monoliths-and-microservices-8c65708c3dbf)
@@ -146,7 +146,7 @@
 	* [可扩展Redis在Twitter的应用](http://highscalability.com/blog/2014/9/8/how-twitter-uses-redis-to-scale-105tb-ram-39mm-qps-10000-ins.html)
 	* [Slack 使用Redis扩展任务队列](https://slack.engineering/scaling-slacks-job-queue-687222e9d100)
 	* [Github 将持久性数据从Redis中移出](https://githubengineering.com/moving-persistent-data-out-of-redis/)
-	* [nstagram 在 Redis 中存储数以亿计的简单键值对](https://engineering.instagram.com/storing-hundreds-of-millions-of-simple-key-value-pairs-in-redis-1091ae80f74c)
+	* [Instagram 在 Redis 中存储数以亿计的简单键值对](https://engineering.instagram.com/storing-hundreds-of-millions-of-simple-key-value-pairs-in-redis-1091ae80f74c) [原文](./原文/Storing_hundreds_of_millions_of_simple_key-value_pairs_in_Redis.md)
 	* [Redis在Trivago的应用](http://tech.trivago.com/2017/01/25/learn-redis-the-hard-way-in-production/)
 	* [Deliveroo 优化Redis存储](https://deliveroo.engineering/2017/01/19/optimising-membership-queries.html)
 	* [Wattpad Redis中的内存优化](http://engineering.wattpad.com/post/23244724794/store-more-stuff-memory-optimization-in-redis)
