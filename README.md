@@ -67,7 +67,7 @@
 * [SQL vs NoSQL](https://www.upwork.com/hiring/data/sql-vs-nosql-databases-whats-the-difference/)
 * [SQL vs NoSQL - 来自Salesforce的经验](https://engineering.salesforce.com/sql-or-nosql-9eaf1d92545b)
 * [NoSQL数据库: 调查和决策指导](https://medium.baqend.com/nosql-databases-a-survey-and-decision-guidance-ea7823a822d)
-* [分片是如何工作的](https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6)
+* [分片是如何工作的](https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6) | [原文](./原文/how_sharding_works.md) | [译文](./译文/how_sharding_works.md)
 * [一致性hash](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
 * [一致性哈希：算法上的权衡](https://medium.com/@dgryski/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8)
 * [不要被散列技巧欺骗](https://booking.ai/dont-be-tricked-by-the-hashing-trick-192a6aae3087)
